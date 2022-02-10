@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background-image: linear-gradient(
+    45deg,
+    hsl(33deg 85% 65%) 0%,
+    hsl(32deg 84% 63%) 11%,
+    hsl(30deg 82% 60%) 22%,
+    hsl(28deg 81% 57%) 33%,
+    hsl(26deg 80% 55%) 44%,
+    hsl(24deg 79% 52%) 56%,
+    hsl(22deg 77% 50%) 67%,
+    hsl(19deg 83% 48%) 78%,
+    hsl(16deg 87% 46%) 89%,
+    hsl(11deg 90% 45%) 100%
+  );
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.sectionhome {
+  position: absolute;
+  top: 95%;
+  margin: auto;
+  color: white;
+  font-family: "Cabin", sans-serif;
+  font-size: 1vmin;
+  width: 33.33%;
+  text-align: center;
+}
+
+
+/*# sourceMappingURL=main.css.map*/

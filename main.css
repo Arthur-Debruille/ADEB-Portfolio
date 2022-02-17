@@ -5,7 +5,7 @@
 
 html,
 body {
-  height: 100%;
+  max-height: 100%;
   background-image: linear-gradient(
     45deg,
     hsl(33deg 85% 65%) 0%,
@@ -37,5 +37,32 @@ body {
   text-align: center;
 }
 
+
+
+@media (max-width: 500px) and (min-width: 200px) {
+  .projects-div{
+    margin: auto;
+  }
+  
+  .aboutme-div{
+    margin: auto;
+  }
+  
+  .contact-div{
+    margin: auto;
+  }
+  .sectionhome {
+    position: relative;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sectionhome{
+    display: none;
+  }
+
+}
 
 /*# sourceMappingURL=main.css.map*/

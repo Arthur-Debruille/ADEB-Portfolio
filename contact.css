@@ -6,6 +6,7 @@
 
 html,
 body {
+  overflow-x: hidden;
   font-family: "Cabin", sans-serif;
   max-height: 100%;
   background-image: linear-gradient(
@@ -18,17 +19,62 @@ body {
     hsl(24deg 79% 52%) 56%,
     hsl(22deg 77% 50%) 67%,
     hsl(19deg 83% 48%) 78%,
-    hsl(16deg 87% 46%) 89%,
-    hsl(11deg 90% 45%) 100%
+    rgb(219, 70, 15) 89%,
+    rgb(218, 49, 11) 100%
   );
 }
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+nav {
+  position: fixed;
+  text-align: center;
+  padding: 25px 0px;
+  z-index: 1000;
+}
+
+ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+li {
+  color: white;
+  text-decoration: none;
+}
+
+.active{
+  background-color: #FFAF22;
+  color: black;
+  border-radius: 20px;
+  padding: 10px 25px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li .underline .active{
+  width: 100%;
+  height: 3px;
+  background-color: red;
+}
+
 .container {
   width: 100%;
   height: 100%;
   display: flex;
   position: relative;
 }
-
+.back-button {
+  position: fixed;
+}
 .container-about {
   width: 100%;
   height: 100%;
@@ -53,18 +99,17 @@ body {
   text-align: center;
 }
 
-.arrow{
+.arrow {
   width: 50px;
 }
 
-.contact-info-container{
+.contact-info-container {
   position: relative;
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(
     45deg,
-    hsl(11deg 90% 45%) 100%
-    hsl(16deg 87% 46%) 89%,
+    hsl(11deg 90% 45%) 100% hsl(16deg 87% 46%) 89%,
     hsl(19deg 83% 48%) 78%,
     hsl(22deg 77% 50%) 67%,
     hsl(24deg 79% 52%) 56%,
@@ -72,66 +117,62 @@ body {
     hsl(28deg 81% 57%) 33%,
     hsl(32deg 84% 63%) 11%,
     hsl(32deg 84% 63%) 11%,
-    hsl(33deg 85% 65%) 0%,
+    hsl(33deg 85% 65%) 0%
   );
 }
 
-.contact-info{
+.contact-info {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-
-
-.title:hover{
+.title:hover {
   cursor: url(""), auto;
 }
-.clicked-container{
+.clicked-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transform: rotate(-10deg);
-
 }
-.clicked{
+.clicked {
   width: 30px;
   animation: growUp 1s ease-in infinite;
 }
 
-#name{
+#name {
   text-transform: uppercase;
   font-size: 30px;
   color: white;
   font-weight: 400;
 }
 
-.title{
+.title {
   font-weight: 500;
   font-size: 20px;
   text-transform: uppercase;
   margin: 15px 0px;
 }
 
-.info{
+.info {
   display: block;
   font-size: 30px;
   text-transform: uppercase;
   color: white;
   text-decoration: none;
-  
 }
 
 @keyframes growUp {
-  0%{
+  0% {
     transform: scale(90%);
   }
-  50%{
+  50% {
     transform: scale(100%);
   }
-  100%{
+  100% {
     transform: scale(90%);
   }
 }

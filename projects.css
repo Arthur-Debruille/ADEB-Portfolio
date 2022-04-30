@@ -233,6 +233,10 @@ span {
   justify-content: center;
 }
 
+#softSkills p {
+  margin: 10px 0;
+}
+
 @keyframes growUp {
   0% {
     transform: scale(90%);
@@ -246,41 +250,37 @@ span {
 }
 
 #htmlLogo {
-  cursor: url(4df7317857a52878c924c2b889c91c2c.png), auto;
+  cursor: url(img/html_60x60.png), auto;
 }
 #cssLogo {
-  cursor: url(04d63349c9fddaf0e2b4e77012013630.png), auto;
+  cursor: url(img/css_60x60.png), auto;
 }
 #sassLogo {
-  cursor: url(9bf30fd454503f31fa2d51b626747d8c.png), auto;
+  cursor: url(img/sass_60x60.png), auto;
 }
 #scssLogo {
-  cursor: url(9bf30fd454503f31fa2d51b626747d8c.png), auto;
+  cursor: url(img/sass_60x60.png), auto;
 }
 #jsLogo {
-  cursor: url(caa337e169a60f51a1003dd33335835b.png), auto;
+  cursor: url(img/js_60x60.png), auto;
 }
 #reactLogo {
-  cursor: url(c40673e2b3f56c772ea965ca503936de.png), auto;
+  cursor: url(img/react_60x60.png), auto;
 }
 #vuejsLogo {
-  cursor: url(2a9c5ae2537983fc2d3041e81abebd1d.png), auto;
+  cursor: url(img/vuejs_60x60.png), auto;
 }
 #gitLogo {
-  cursor: url(ca869ea54b4f56c966ebf6782cd1d53c.png), auto;
+  cursor: url(img/git_60x60.png), auto;
 }
 #wpLogo {
-  cursor: url(5dff4f01deea40c67618dd21f258af96.png), auto;
+  cursor: url(img/wp_60x60.png), auto;
 }
 
 
-#mydiv {
-  height: 350px;
+#windowPiBureautique {
   width: 640px;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 300px;
   z-index: 9;
   background-color: #f1f1f1;
   border: 1px solid #d3d3d3;
@@ -290,13 +290,20 @@ span {
 }
 
 
-#mydiv2 {
+#windowProInteractiveDisplay {
   width: 640px;
-  height: 350px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 20%;
-  left: 50%;
+  height: 300px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#windowThreeDCourse {
+  width: 640px;
+  height: 300px;
   z-index: 9;
   background-color: #f1f1f1;
   border: 1px solid #d3d3d3;
@@ -306,7 +313,8 @@ span {
 }
 
 
-#mydivheader2 {
+
+#windowBarHeader {
   border-top-left-radius: 10px ;
   border-top-right-radius: 10px ;
   display: flex;
@@ -364,10 +372,6 @@ span {
 }
 
 .pib-info{
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%,-50%);
   max-width: 500px; 
   text-align: center; 
   margin: auto; 
@@ -380,11 +384,43 @@ span {
   margin: 15px 0px;
 }
 
+.window-video-project{
+  width: 100%;
+}
 
+#dImage{
+  width: 100%;
+}
 
+.project-info-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
+.piBureautique-project{
+  
+  width: 90%;
+  margin: auto;
+  display: flex;
+  margin: 10px auto;
+}
 
+.proInteractiveDisplay-project{
+  
+  width: 90%;
+  margin: auto;
+  display: flex;
+  margin: 10px auto;
+}
 
+.coursThreeD-project{
+  
+  width: 90%;
+  margin: auto;
+  display: flex;
+  margin: 10px auto;
+}
 
 
 
@@ -457,45 +493,43 @@ span {
     justify-content: center;
   }
 
-  #mydiv {
-    width: 100vw;
-    height: 225px;
-  }
-  
-  
-  #mydiv2 {
-    width: 100vw;
-    height: 225px;
-  }
-  #close{
-    width: 15px;
-    height: 10px;
-
-  } 
-
-  #minimize{
-    width: 15px;
-    height: 10px;
-
-  }
-
-  #grow{
-    width: 15px;
-    height: 10px;
-  }
-
-  .pib-info{
-    display: none;
-  }
-
-  .pid-info{
-    display: none;
-  }
-
   ul{
     gap: 35px;
   }
 
+}
+
+
+
+@media (max-width: 1120px) and (min-width: 200px) {
+
+  #windowPiBureautique {
+    width: 90vw;
+    height: 200px;
+  }
+  
+  
+  #windowProInteractiveDisplay {
+    width: 90vw;
+    height: 200px;
+  }
+
+  #windowThreeDCourse {
+    width: 90vw;
+    height: 200px;
+  }
+
+  .piBureautique-project{
+    flex-direction: column;
+  }
+  
+  .proInteractiveDisplay-project{
+    flex-direction: column;  
+  }
+  
+  .coursThreeD-project{
+    flex-direction: column;  
+  }
 
 }
 
